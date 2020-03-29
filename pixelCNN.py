@@ -3,9 +3,41 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
-from pixelcnn import PixelCNN
+from masked_cnn_layer import MaskedConv2d
 
-def train(train_data, test_data, image_shape):
+
+class PixelCNN(nn.Module):
+    """ Simple PixelCNN architecture for modeling binary MNIST and shapes images """
+    def __init__(self):
+        super().__init__()
+        num_filters = 64
+        self.net = nn.Sequential(
+            MaskedConv2d('A', 1, num_filters, kernel_size=7, stride=1, padding=3),
+            nn.ReLU(),
+
+            MaskedConv2d('B', num_filters, num_filters, kernel_size=7, stride=1, padding=3), nn.ReLU(),
+            nn.BatchNorm2d(num_filters),
+            MaskedConv2d('B', num_filters, num_filters, kernel_size=7, stride=1, padding=3), nn.ReLU(),
+            nn.BatchNorm2d(num_filters),
+            MaskedConv2d('B', num_filters, num_filters, kernel_size=7, stride=1, padding=3), nn.ReLU(),
+            nn.BatchNorm2d(num_filters),
+            MaskedConv2d('B', num_filters, num_filters, kernel_size=7, stride=1, padding=3), nn.ReLU(),
+            nn.BatchNorm2d(num_filters),
+            MaskedConv2d('B', num_filters, num_filters, kernel_size=7, stride=1, padding=3), nn.ReLU(),
+            nn.BatchNorm2d(num_filters),
+
+            MaskedConv2d('B', num_filters, num_filters, kernel_size=1, stride=1, padding=0), nn.ReLU(),
+            nn.BatchNorm2d(num_filters),
+            MaskedConv2d('B', num_filters, 1, kernel_size=1, stride=1, padding=0),
+            nn.Sigmoid()
+        )
+
+    def forward(self, x):
+        return self.net(x)
+
+
+
+def main(train_data, test_data, image_shape):
     """
         train_data: A (n_train, H, W, 1) uint8 numpy array of binary images with values in {0, 1}
         test_data: A (n_test, H, W, 1) uint8 numpy array of binary images with values in {0, 1}
