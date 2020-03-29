@@ -13,7 +13,7 @@ This is done by masking the convolutional filters, see figure below.
 ## Datasets
 The four datasets used:
 
-Shapes | MNIST | Colored Shapes | Colored MNIST
+Binary Shapes | Binary MNIST | Colored Shapes | Colored MNIST
 :--- | :--- | :--- | :--- 
 ![](https://i.imgur.com/4iU3eDY.png) | ![](https://i.imgur.com/mlO1TuB.png) | ![](https://i.imgur.com/F23XE4t.png) | ![](https://i.imgur.com/bvtHHQm.png)
 
