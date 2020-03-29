@@ -54,7 +54,7 @@ def train(train_data, test_data, image_shape):
         test_losses.append(get_test_loss(test_data))
         print(f'{epoch + 1}/{epochs} epochs')
 
-    torch.cuda.empty_cache()
+
     net.eval()
 
     # Sampling
