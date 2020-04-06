@@ -30,9 +30,9 @@ This model supports RGB color channels, but models the color channels independen
 
 <img src="https://i.imgur.com/uzd19aT.png" width="300"/>
 
-Trained on color Shapes and color MNIST
+Trained on color Shapes and color MNIST.
 It uses the following architecture:
-- A 7×7  masked type A convolution
+- A 7×7 masked type A convolution
 - 8 residual blocks with masked type B convolutions
 - Appropriate ReLU nonlinearities and Batch Normalization in-between
 - 128 convolutional filters
@@ -59,7 +59,7 @@ Class labels are conditioned on by adding a conditional bias in each convolution
 
 <img src="https://i.imgur.com/le7eE3K.png" width="200"/>, 
 
-where <img src="https://i.imgur.com/o2SHzS4.png" width="200"/> is a masked convolution (as in the previous models), V is a 2D weight matrix, and y is a one-hot encoding of the class label (where the conditional bias is broadcasted spacially and added channel-wise). Uses a similar architecture as the regular PixelCNN. 
+where <img src="https://i.imgur.com/o2SHzS4.png" width="75"/> is a masked convolution (as in the previous models), V is a 2D weight matrix, and y is a one-hot encoding of the class label (where the conditional bias is broadcasted spacially and added channel-wise). Uses a similar architecture as the regular PixelCNN. 
 
 
 ## Datasets
