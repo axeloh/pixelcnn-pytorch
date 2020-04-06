@@ -1,3 +1,4 @@
 theme: jekyll-theme-cayman
 title: PixelCNNs
 description: A PyTorch implementation of various PixelCNN models.
+show_downloads: True
