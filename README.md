@@ -8,7 +8,7 @@ PixelCNNs are a type of autoregressive generative models which try to model the 
 
 <img src="https://i.imgur.com/pP3SLRU.png" width="250"/>
 
-The ordering of the pixel dependencies is in raster scan order: row by row and pixel by pixel within every row. Every pixel therefore depends on all the pixels above and to the left of it, and not on any other pixels. We see this autoregressive property in other autoregressive models such as MADE. The difference lies in the way the conditional distributions are constructed. With PixelCNN every conditional distribution is modelled by a CNN with masked convolutions. 
+The ordering of the pixel dependencies is in raster scan order: row by row and pixel by pixel within every row. Every pixel therefore depends on all the pixels above and to the left of it, and not on any other pixels. We see this setup in other autoregressive models such as MADE. The difference lies in the way the conditional distributions are constructed. With PixelCNN every conditional distribution is modelled by a CNN using masked convolutions. 
 
 <img src="https://i.imgur.com/qGTXtcl.png" width="300" hspace="60"/> <img src="https://i.imgur.com/Hrr2Ynq.png" width="200"/>         
 
