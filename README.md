@@ -98,3 +98,4 @@ Colored Shapes | Colored MNIST
 Binary Shapes | Binary MNIST
 :--- | :---
 ![](https://i.imgur.com/JcR1pVS.png) | ![](https://i.imgur.com/qLcP3n6.png)
+
