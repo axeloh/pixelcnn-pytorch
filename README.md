@@ -1,6 +1,3 @@
-# pixelcnn-pytorch
-A PyTorch implementation of different PixelCNN models. 
-
 #### Inspiration
 Based on [Pixel Recurrent Neural Networks](https://arxiv.org/abs/1601.06759) by van den Oord et. al.
 This by no means serve to reproduce the original results in the paper.
