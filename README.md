@@ -82,17 +82,17 @@ Binary Shapes | Binary MNIST
 
 Colored Shapes | Colored MNIST
 :--- | :--- 
-![](https://i.imgur.com/FJxxt1l.png) |  ![](https://i.imgur.com/4tp9mF6.png)
+![](https://i.imgur.com/FJxxt1l.png) | ![](https://i.imgur.com/4tp9mF6.png)
 
 
 #### Autoregressive PixelRCNN
 
 Colored Shapes | Colored MNIST
 :--- | :---
- ![](https://i.imgur.com/poxJoWA.png) |  ![](https://i.imgur.com/EB0b3wx.png) 
+![](https://i.imgur.com/poxJoWA.png) | ![](https://i.imgur.com/EB0b3wx.png) 
 
 
 #### Conditional PixelCNN
 Binary Shapes | Binary MNIST
 :--- | :---
- ![](https://i.imgur.com/JcR1pVS.png) |  ![](https://i.imgur.com/qLcP3n6.png)
+![](https://i.imgur.com/JcR1pVS.png) | ![](https://i.imgur.com/qLcP3n6.png)
