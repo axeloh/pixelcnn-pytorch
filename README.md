@@ -79,12 +79,14 @@ Binary Shapes | Binary MNIST
  
  
 #### PixelRCNN
+
 Colored Shapes | Colored MNIST
 :--- | :--- 
 ![](https://i.imgur.com/FJxxt1l.png) |  ![](https://i.imgur.com/4tp9mF6.png)
 
 
 #### Autoregressive PixelRCNN
+
 Colored Shapes | Colored MNIST
 :--- | :---
  ![](https://i.imgur.com/poxJoWA.png) |  ![](https://i.imgur.com/EB0b3wx.png) 
