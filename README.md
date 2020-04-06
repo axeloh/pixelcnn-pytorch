@@ -28,7 +28,7 @@ It has the following architecture:
 #### PixelCNN with independent color channels (PixelRCNN)
 This model supports RGB color channels, but models the color channels independently. More formally, we model the following parameterized distribution:
 
-<img src="https://i.imgur.com/uzd19aT.png" width="300"/>
+<img src="https://i.imgur.com/uzd19aT.png" width="250"/>
 
 Trained on color Shapes and color MNIST.
 It uses the following architecture:
@@ -53,7 +53,7 @@ Figure above shows the difference between type A and type B mask. The 'context' 
 #### Conditional PixelCNNs
 This PixelCNN is class-conditional on binary MNIST and binary Shapes. Formally, we model the conditional distribution:
 
-<img src="https://i.imgur.com/LdGkj5R.png" width="200"/>
+<img src="https://i.imgur.com/LdGkj5R.png" width="250"/>
 
 Class labels are conditioned on by adding a conditional bias in each convolutional layer. More precisely, in the <img src="https://i.imgur.com/TVtAqFP.png" width="10"/>th convolutional layer, we compute 
 
