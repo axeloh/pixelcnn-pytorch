@@ -53,7 +53,7 @@ Figure above shows the difference between type A and type B mask. The 'context' 
 #### Conditional PixelCNNs
 This PixelCNN is class-conditional on binary MNIST and binary Shapes. Formally, we model the conditional distribution:
 
-<img src="https://i.imgur.com/LdGkj5R.png" width="300"/>
+<img src="https://i.imgur.com/LdGkj5R.png" width="200"/>
 
 Class labels are conditioned on by adding a conditional bias in each convolutional layer. More precisely, in the <img src="https://i.imgur.com/TVtAqFP.png" width="10"/>th convolutional layer, we compute 
 
