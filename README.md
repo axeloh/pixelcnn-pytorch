@@ -18,7 +18,7 @@ The left figure visualizes how the PixelCNN maps a neighborhood of pixels to pre
 ## PixelCNN models
 #### Regular PixelCNN
 This model followes a simple PixelCNN architecture to model binary MNIST and shapes images. 
-It has the following network design: 
+It has the following architecture: 
 - A  7×7  masked type A convolution
 - 5  7×7  masked type B convolutions
 - 2  1×1  masked type B convolutions
@@ -57,7 +57,7 @@ This PixelCNN is class-conditional on binary MNIST and binary Shapes. Formally, 
 
 Class labels are conditioned on by adding a conditional bias in each convolutional layer. More precisely, in the <img src="https://i.imgur.com/TVtAqFP.png" width="10"/>th convolutional layer, we compute 
 
-<img src="https://i.imgur.com/le7eE3K.png" width="200"/>, 
+<img src="https://i.imgur.com/le7eE3K.png" width="150"/>, 
 
 where <img src="https://i.imgur.com/o2SHzS4.png" width="75"/> is a masked convolution (as in the previous models), V is a 2D weight matrix, and y is a one-hot encoding of the class label (where the conditional bias is broadcasted spacially and added channel-wise). Uses a similar architecture as the regular PixelCNN. 
 
