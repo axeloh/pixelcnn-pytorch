@@ -50,12 +50,12 @@ the center pixel. The filters are split into 3 groups, only allowing each group 
 
 <img src="https://i.imgur.com/zD81GA7.png" width="300"/>
 
-For computing a prediction for pixel x<sub>i</sub> in channel R we only use previous pixels x<sub><i/sub> in channel R (mask type A). Then, when predicting pixel x<sub>i</sub> in the G channel we use the previous pixels x<sub><i/sub> in both G and R, but since we at this time also have a prediction for x<sub>i</sub> in the R channel, we may use this as well (mask type B). Similarly, when predicting x<sub>i</sub> in channel B, we can use previous pixels for all channels, along with current pixel x<sub>i</sub> for channel R and G.
+For computing a prediction for pixel x<sub>i</sub> in channel R we only use previous pixels x<sub><i</sub> in channel R (mask type A). Then, when predicting pixel x<sub>i</sub> in the G channel we use the previous pixels x<sub><i</sub> in both G and R, but since we at this time also have a prediction for x<sub>i</sub> in the R channel, we may use this as well (mask type B). Similarly, when predicting x<sub>i</sub> in channel B, we can use previous pixels for all channels, along with current pixel x<sub>i</sub> for channel R and G.
 This way, the predictions are now dependent on colored channels. 
 
 <img src="https://i.imgur.com/kCByD1A.png" width="300"/>
 
-Figure above shows the difference between type A and type B mask. The 'context' refers to all the previous pixels (x<sub><i/sub>).
+Figure above shows the difference between type A and type B mask. The 'context' refers to all the previous pixels (x<sub><i</sub>).
 
 #### Conditional PixelCNNs
 This PixelCNN is class-conditional on binary MNIST and binary Shapes.
