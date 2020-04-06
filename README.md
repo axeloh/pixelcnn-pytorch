@@ -4,11 +4,11 @@ Based on [Pixel Recurrent Neural Networks](https://arxiv.org/abs/1601.06759) by 
 This by no means serve to reproduce the original results in the paper.
 
 ## PixelCNN
-PixelCNNs are a type of autoregressive generative models which try to model the generation of images as a sequence of generation of pixels.
-They preserve the autoregressive property (i-th output pixel only dependent on the i-1 previous pixels) while using convolutional filters.
-This is done by masking the convolutional filters, see figure below.
+PixelCNNs are a type of autoregressive generative models which try to model the generation of images as a sequence of generation of pixels. They preserve the autoregressive property (i-th output pixel only dependent on the i-1 previous pixels) while using convolutional filters.
 
-![](https://i.imgur.com/JPUlGQP.png)
+![](https://i.imgur.com/JPUlGQP.png)        <img src="https://i.imgur.com/qGTXtcl.png" width="300"/>
+
+The left figure visualizes how the PixelCNN maps a neighborhood of pixels to prediction for the next pixel. To generate pixel x<sub>i</sub> the model can only condition on the previously generated pixels x<sub>1</sub>, ..., x<sub>i-1</sub>. This conditioning is done by masking the convolutional filters, as shown in the right figure.
 
 ## Datasets
 The four datasets used:
@@ -29,9 +29,12 @@ It has the following network design:
 - 64 convolutional filters
 
 #### PixelCNN with independent color channels (PixelRCNN)
-This model supports RGB color channels, but models the color channels independently.
-Trained on color Shapes and color MNIST.
-It has the following network design:
+This model supports RGB color channels, but models the color channels independently. More formally, we model the following parameterized distribution:
+
+<img src="https://i.imgur.com/uzd19aT.png" width="300"/>
+
+Trained on color Shapes and color MNIST
+It uses the following architecture:
 - A 7×7  masked type A convolution
 - 8 residual blocks with masked type B convolutions
 - Appropriate ReLU nonlinearities and Batch Normalization in-between
